@@ -1,0 +1,126 @@
+  @mixin index {
+    text-decoration: none;
+    align-self: center;
+    
+  }
+
+   .img1 {
+    grid-area: img1;
+    display: flex;
+    justify-content: center;
+    background-color: #d20962;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .img2 {
+    grid-area: img2;
+    display: flex;
+    justify-content: center;
+    background-color: #00a78e;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .img3 {
+    grid-area: img3;
+    display: flex;
+    justify-content: center;
+    background-color: #f47721;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .img4 {
+    grid-area: img4;
+    display: flex;
+    justify-content: center;
+    background-color: #7ac143;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .img5 {
+    grid-area: img5;
+    display: flex;
+    justify-content: center;
+    background-color: #00bce4;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .img6 {
+    grid-area: img6;
+    display: flex;
+    justify-content: center;
+    background-color: #7d3f98;
+    border-radius: 10px;
+    text-align: center; }
+  
+  .contenedor {
+    max-width: 1200px;
+    margin: auto;
+    width: 80vw;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 60px;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "img1 img1 img2"
+   "img3 img4 img6"
+   "img3 img5 img6";
+    gap: 10px; }
+  
+  .translate:hover {
+    transform: translate(20px, 30px);
+    border-style: solid;
+    border-width: 5px;
+    border-color:$color-principal; 
+  }
+  
+  .img1 a {
+    @include index;
+   }
+  
+  .img2 a {
+    @include index; 
+  }
+  
+  .img3 a {
+    @include index;
+  }
+  
+  .img4 a {
+   @include index;
+   }
+  
+  .img5 a {
+    @include index;
+  }
+  
+  .img6 a {
+    @include index;
+  }
+  
+  h2 {
+    font-family: 'Changa', sans-serif;
+    font-size: 40px;
+    color: black;
+    margin: auto;
+    text-transform: uppercase; }
+
+    @media only screen and (max-width: 520px){
+    .contenedor {
+      width: 80vw;
+      margin-top: 40px;
+      height: 80vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: "img1"
+   "img2"
+   "img3"
+   "img4"
+   "img5"
+   "img6"; }
+    h2 {
+      font-size: 30px;
+      line-height: 40px; }
+    }

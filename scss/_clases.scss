@@ -1,0 +1,105 @@
+
+@mixin grid {
+  width: 100%;
+  height: 250px;
+}
+
+.titclases {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: 'Changa', sans-serif;
+    font-size: 40px;
+    padding-top: 30px;
+    text-shadow: 2px 4px $color-principal; }
+  
+.tarjetas {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    max-width: 1100px;
+    padding-top: 15px;
+    gap: 4rem;
+    margin: 0 auto;
+    flex-direction: row; 
+    .tarjeta {
+      border: 10px;
+      text-align: center;
+      height: 50vh;
+      background-color: white;
+      width: 300px;
+      border-radius: 15px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black;
+      color: black;
+      box-shadow: 2px 4px $color-principal;
+      font-weight: 600;
+      font-size: 30px; 
+    &:hover {
+    transform: translate(20px, 30px); }
+      .imga {
+      @include grid;
+     }
+  
+      .imgb {
+        @include grid; }
+  
+      .imgc {
+        @include grid; }
+  
+      .imgd {
+        @include grid;
+      }
+    }
+}
+
+@media only screen and (max-width: 520px){
+  .titclases {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-top: 0; }
+  .imga {
+    grid-area: imga;
+    display: flex; }
+  .imgb {
+    grid-area: imgb;
+    display: flex; }
+  .imgc {
+    grid-area: imgc;
+    display: flex; }
+  .imgd {
+    grid-area: imgd;
+    display: flex; }
+  .tarjetas {
+    height: 80%;
+    position:relative;
+    bottom: 30px;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "imga"
+ "imgb"
+ "imgc"
+ "imgd"; }
+
+}
+@media only screen and (min-width: 520px) and (max-width: 1025px){
+  .tarjetas {
+    position: relative;
+    bottom: 20px;
+    display: grid;
+    justify-items: center;
+    margin-bottom: 35px;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "imga"
+ "imgb"
+ "imgc"
+ "imgd"; }
+}

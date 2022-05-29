@@ -1,0 +1,32 @@
+.recomendaciones{
+width: 100%;
+text-align: center;
+color: black;
+font-family: 'Changa', sans-serif;
+font-size: 40px;
+padding-top: 30px;
+text-shadow: 2px 4px $color-principal;
+text-align: center; 
+}
+.reco{
+    display: block;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    }
+
+.linkreco{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-family: 'Changa', sans-serif;
+    font-size: 40px;
+    padding-top: 30px;
+    text-shadow: 2px 4px $color-principal;
+    text-align: center; 
+    bottom: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
